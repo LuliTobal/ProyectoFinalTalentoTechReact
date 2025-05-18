@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NavBar from './componentes/NavBar';
 import Home from './paginas/Home';
 import Alacena from './paginas/Alacena';
 import TusRecetas from './paginas/TusRecetas';
-import Lista from './paginas/Lista';
+import Listas from './paginas/Listas';
 import SobreNosotros from './paginas/SobreNos';
 import Contacto from './paginas/Contacto';
+import ListaActual from './paginas/ListaActual';
+import Header from './componentes/Header';
 
 function App() {
 
@@ -13,20 +14,20 @@ function App() {
     <div>
       <Router>
         <div>
-          <NavBar />
+          <Header />
           <Routes>
             <Route path='/' element={ <Home/> } />
             <Route path='alacena' element={ <Alacena/> } />
             <Route path='recetas' element={ <TusRecetas/> } />
-            <Route path='listas' element={ <Lista/> } />
+            <Route path='listas' element={ <Listas/> } />
             <Route path='nosotros' element={ <SobreNosotros/> } />
             <Route path='contacto' element={ <Contacto/> } />
+            <Route path='lista' element={ <ListaActual/> } />
           </Routes>
         </div>
       </Router>
-
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
