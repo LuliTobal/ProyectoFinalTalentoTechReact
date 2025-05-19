@@ -27,7 +27,7 @@ function CardReceta() {
         <div style={{ display:'flex', flexDirection:'row', flexWrap: 'wrap' }}>
           {recetas.map(receta => (
             <div key={receta.idMeal} style={{ margin:'2%', display:'inline'}}>
-              <img src={receta.strMealThumb} alt={receta.strMeal} style={{ width: '70%', borderRadius:'50%' }} />
+              <img src={receta.strMealThumb} alt={receta.strMeal} style={{ width: '30%', borderRadius:'50%' }} />
               <h3>{receta.strMeal}</h3>
               <p>{receta.strInstructions}</p>
             </div>

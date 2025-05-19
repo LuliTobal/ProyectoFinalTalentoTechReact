@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from 'react'; //para manejar el menu hamburguesa
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 function NavBar(){
 
@@ -10,7 +12,7 @@ function NavBar(){
 
     return(
         <nav className={`navbar`} >{/*operador ternario para el menu*/}
-            <img src="src\assets\burger_menu.svg" alt="Menú" className="menu_icon" onClick={toggleMenu} />
+            <FontAwesomeIcon icon={faBars} alt="Menú" className="menu_icon" onClick={toggleMenu} />
             <div className={`nav_links ${menuOpen ? 'open' : ''}`}>
                 <Link to='/'>Home</Link>
                 <Link to='/alacena'>Tu Alacena</Link>

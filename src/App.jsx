@@ -7,6 +7,7 @@ import SobreNosotros from './paginas/SobreNos';
 import Contacto from './paginas/Contacto';
 import ListaActual from './paginas/ListaActual';
 import Header from './componentes/Header';
+import Footer from './componentes/Footer';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
             <Route path='contacto' element={ <Contacto/> } />
             <Route path='lista' element={ <ListaActual/> } />
           </Routes>
+          <Footer />
         </div>
       </Router>
     </div>

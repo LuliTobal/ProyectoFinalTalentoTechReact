@@ -1,15 +1,16 @@
 .header_nav {
-    font-family: "Lato", sans-serif ;
     display: flex;
     width: 100%;
     background-color: #F9D1D6;
-    padding: 1.5rem;
+    padding: 1.2rem 1.5rem 0.5rem 1.5rem;
+    align-items: baseline;
 }
 
 .header_usuario{
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .logo{
@@ -17,7 +18,9 @@
 }
 
 .iconos_header{
-    height: 45px;
+    height: 2.5rem;
+    margin: 0.5rem;
+    color: #E11932;
 }
 
 /*NavBar general, cuando esta false y no se desató el evento on click*/
@@ -26,11 +29,14 @@
     flex-direction: column;
     align-items: flex-end;
     position: relative;
+    padding-top: 1rem;
 }
 
 /*para visualizar el icono del menu hamburguesa en tablet y mobile*/
 .menu_icon{
-    width: 45px;
+    height: 2.5rem;
+    margin: 0.5rem;
+    color: #E11932;
     cursor: pointer;
 }
 
@@ -79,10 +85,11 @@
     .nav_links{
         display: flex;
         flex-direction: row;
-        gap: 2rem;
+        gap: 2.5rem;
         position: static;
         background-color: #F9D1D6;
         box-shadow: none;
         padding: 0;
+        justify-content: space-evenly;
     }
 }
