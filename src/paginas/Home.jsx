@@ -1,4 +1,5 @@
 import CardReceta from "../componentes/CardReceta";
+import Categorias from '../componentes/organismos/Categorias'
 
 function Home(){
 
@@ -6,7 +7,7 @@ function Home(){
         <div>
             <section>
                 <h2>Categorias</h2>
-                {/*Compornente carrusel categoria */}   
+                <Categorias /> 
             </section>
 
             <section>
