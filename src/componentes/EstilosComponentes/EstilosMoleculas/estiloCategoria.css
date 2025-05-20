@@ -1,17 +1,29 @@
 .contenedor{
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
-    background: linear-gradient(to bottom, #ffffff, #fce2e5, #e6838e);
-    width: 25%;
+    background: linear-gradient(to bottom, #fff, #F9D1D6);
+    width:fit-content;
+    min-width: 5%;
+    max-width: 12%;
     border-radius: 30px;
     align-items: center;
     text-align: center;
-    padding: 0 0 0 1%;
-    margin-top: 2%;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    margin: 2%;
+    transition: transform 0.2s ease;
 }
 
+.contenedor:hover{
+    transform: scale(1.05);
+}
 
-@media (min-width: 768px) {
+.texto{
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* @media (min-width: 768px) {
     .contenedor{
         width: 12%;
     }
@@ -19,6 +31,6 @@
 
 @media (min-width: 1024px) {
     .contenedor{
-        width: 10%;
+        width: 8%;
     }
-}
+} */

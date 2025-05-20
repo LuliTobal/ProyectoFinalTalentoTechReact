@@ -4,8 +4,9 @@ import '../EstilosComponentes/EstilosAtomos/estiloTexto.css'
 
 const Texto = ({ level, texto, variante}) => {
     const textosClassnames = classnames('texto', {
-        orange: variante === 'orange',
-        green: variante === 'green',
+        dark: variante === 'dark',
+        medium: variante === 'maedum',
+        light: variante === 'light',
         white: variante === 'white',
         black: variante === 'black',
         tituloFooter: variante === 'tituloFooter',

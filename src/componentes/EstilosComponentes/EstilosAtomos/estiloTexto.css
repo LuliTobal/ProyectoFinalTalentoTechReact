@@ -19,12 +19,16 @@ p {
   padding-right: 1vh;
 }
 
-.orange {
-  color: #f87c01;
+.dark {
+  color: #E11932;
 }
 
-.green {
-  color: #76b939;
+.medium{
+  color: #F9D1D6;
+}
+
+.light {
+  color: #F2F3F7;
 }
 
 .white {

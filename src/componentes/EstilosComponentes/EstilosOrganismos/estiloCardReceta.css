@@ -1,0 +1,43 @@
+.conteainer_cardsRecetas{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem; 
+}
+
+.card_receta{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.informacion_receta{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 4px 4px 0 rgb( 0 , 0, 0, 0.1);
+}
+
+.img_receta{
+    width: 50%;
+    object-fit: cover;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 4px 6px 0 rgb( 0 , 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+
+    .conteiner_cardsRecetas{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .card_receta{
+        width: 45%
+    }
+}
