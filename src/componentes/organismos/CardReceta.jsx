@@ -38,6 +38,7 @@ function CardReceta() {
                   <FontAwesomeIcon icon={faStar} />
                   <FontAwesomeIcon icon={faStar} />
                 </span>
+                <p className='intrucciones_receta'>{receta.strInstructions}</p>
                 <Button variante={'principal'} texto={'Ver receta'} className='boton_ver' />
               </div>  
               <img src={receta.strMealThumb} alt={receta.strMeal} className='img_receta' />  
