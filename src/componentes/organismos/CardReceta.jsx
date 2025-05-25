@@ -31,12 +31,13 @@ function CardReceta() {
           {recetas.map(receta => (
             <div className='card_receta' key={receta.idMeal}>
               <div className='informacion_receta'>
+                <Button variante={'icono'} icon={'guardar'} iconSize={'l'} className='boton_guardar' />
                 <p className='categoria_receta'>{receta.strCategory}</p>
-                <h3 className='titulo_receta'>{receta.strMeal}</h3>
+                <h4 className='titulo_receta'>{receta.strMeal}</h4>
                 <span className='valoracion_receta'>
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
+                  <FontAwesomeIcon icon={faStar} size='xs' />
+                  <FontAwesomeIcon icon={faStar} size='xs' />
+                  <FontAwesomeIcon icon={faStar} size='xs' />
                 </span>
                 <p className='intrucciones_receta'>{receta.strInstructions}</p>
                 <Button variante={'principal'} texto={'Ver receta'} className='boton_ver' />

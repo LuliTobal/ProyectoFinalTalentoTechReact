@@ -42,3 +42,22 @@
 .button-icon {
   vertical-align: middle;
 }
+
+.con_icono {
+  padding: 1%;
+  border-radius: 0;
+  width:fit-content;
+  background-color: transparent;
+  border: none;
+  color: #E11932;
+}
+
+.icono_editar{
+  padding: 0;
+  border-radius: 4px;
+  margin: 0;
+  width:fit-content;
+  background-color: #E11932;
+  color: #F2F3F7;
+  border: solid 3px #E11932;
+}

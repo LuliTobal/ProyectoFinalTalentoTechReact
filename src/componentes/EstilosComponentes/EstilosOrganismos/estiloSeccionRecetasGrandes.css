@@ -1,0 +1,7 @@
+.container_recetas_grandes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3%;
+    justify-content: center;
+}

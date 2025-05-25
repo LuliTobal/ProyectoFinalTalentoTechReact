@@ -1,8 +1,18 @@
+import SeccionRecetasGrandes from "../componentes/organismos/SeccionRecetasGrandes";
+
 function TusRecetas(){
 
     return(
         <div>
-            <h1>TUS RECETAS</h1>
+            <section>
+                <h2>RECETAS CREADAS</h2>
+            </section>
+
+            <section>
+                <h2>RECETAS GUARDADAS</h2>
+                <SeccionRecetasGrandes />
+            </section>
+            
         </div>
     );
 };
