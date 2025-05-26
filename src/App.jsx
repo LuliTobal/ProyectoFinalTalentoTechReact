@@ -8,6 +8,8 @@ import Contacto from './paginas/Contacto';
 import ListaActual from './paginas/ListaActual';
 import Header from './componentes/Header';
 import Footer from './componentes/Footer';
+import LogIn from './paginas/LogIn';
+import RutaProtegida from './componentes/rutaProtegida';
 
 function App() {
 
@@ -17,13 +19,15 @@ function App() {
         <div>
           <Header />
           <Routes>
-            <Route path='/' element={ <Home/> } />
-            <Route path='alacena' element={ <Alacena/> } />
-            <Route path='recetas' element={ <TusRecetas/> } />
-            <Route path='listas' element={ <Listas/> } />
-            <Route path='nosotros' element={ <SobreNosotros/> } />
-            <Route path='contacto' element={ <Contacto/> } />
-            <Route path='lista' element={ <ListaActual/> } />
+            <Route path='/login' element={ <LogIn/> } />
+            <Route path='/nosotros' element={ <SobreNosotros/> } />
+            <Route path='/contacto' element={ <Contacto/> } />
+
+            <Route path='/' element={ <RutaProtegida><Home/></RutaProtegida> } />
+            <Route path='/alacena' element={ <RutaProtegida><Alacena/></RutaProtegida> } />
+            <Route path='/recetas' element={ <RutaProtegida><TusRecetas/></RutaProtegida> } />
+            <Route path='/listas' element={ <RutaProtegida><Listas/></RutaProtegida> } />            
+            <Route path='/lista' element={ <RutaProtegida><ListaActual/></RutaProtegida> } />  
           </Routes>
           <Footer />
         </div>
