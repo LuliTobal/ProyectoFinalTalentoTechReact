@@ -24,13 +24,13 @@ function Header(){
                     <button>LogIn</button>
                     <button>SignIn</button>
                 </div> */}
-                <div className='header_icons_btns'>
+                <div className='header-botones'>
                     {!isAuth ? (
-                        <Link to='/login'><Boton texto={Login} variante={primario} className="iconos_header" /></Link>
+                        <Link to='/login' className='boton-primario'>Login</Link>
                     ) : (
                         <>
                         <Link to='/lista'><FontAwesomeIcon icon={faFileLines} alt="Icono lista" className="iconos_header" /></Link>
-                        <Boton  texto='Cerrar sesión' onClick={cerrarSesion} className="iconos_header" />
+                        <Boton texto='Cerrar sesión' onClick={cerrarSesion} className="boton-primario" variante='principal' />
                         </> 
                     )}
                 </div>

@@ -1,4 +1,4 @@
-import CardReceta from "../componentes/organismos/CardReceta";
+//import CardReceta from "../componentes/organismos/CardReceta";
 import Categorias from '../componentes/organismos/Categorias'
 import Botones from '../componentes/atomos/Boton'
 import SeccionRecetasGrandes from "../componentes/organismos/SeccionRecetasGrandes";

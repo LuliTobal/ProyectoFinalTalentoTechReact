@@ -9,7 +9,7 @@ import ListaActual from './paginas/ListaActual';
 import Header from './componentes/Header';
 import Footer from './componentes/Footer';
 import LogIn from './paginas/LogIn';
-import RutaProtegida from './componentes/rutaProtegida';
+import RutaProtegida from './componentes/RutaProtegida';
 
 function App() {
 
@@ -20,10 +20,10 @@ function App() {
           <Header />
           <Routes>
             <Route path='/login' element={ <LogIn/> } />
-            <Route path='/nosotros' element={ <SobreNosotros/> } />
+            <Route path='/' element={ <SobreNosotros/> } />
             <Route path='/contacto' element={ <Contacto/> } />
 
-            <Route path='/' element={ <RutaProtegida><Home/></RutaProtegida> } />
+            <Route path='/home/:id' element={ <RutaProtegida><Home/></RutaProtegida> } />
             <Route path='/alacena' element={ <RutaProtegida><Alacena/></RutaProtegida> } />
             <Route path='/recetas' element={ <RutaProtegida><TusRecetas/></RutaProtegida> } />
             <Route path='/listas' element={ <RutaProtegida><Listas/></RutaProtegida> } />            

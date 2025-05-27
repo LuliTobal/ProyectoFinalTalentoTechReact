@@ -11,10 +11,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 2%;
 }
 
 .logo{
-    height: 50px;
+    width: 50%;
 }
 
 .iconos_header{
@@ -38,6 +39,7 @@
     margin: 0.5rem;
     color: #E11932;
     cursor: pointer;
+    align-content: baseline;
 }
 
 /*Para ocultar el navBar*/
@@ -62,6 +64,34 @@
     text-decoration: none;
     color: #E11932;
     font-weight: 500;
+}
+
+.boton-primario {
+    display: flex;
+    padding: 2%;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    margin: 1rem;
+    transition: opacity 0.5s;
+    font-weight: 600;
+    width: 100%;
+    max-width: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #E11932;
+    color: #F2F3F7;
+    box-shadow: 0 4px 4px 0 #0000002c;
+    border: none;
+    text-decoration: none;
+}
+
+.header-botones{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    padding: 1rem;
+    justify-items: right;
+    align-items: center;
 }
 
 /*QUERYS PARA PANTALLAS DE ESCRITORIO - A PARTIR DE LOS 768PX*/

@@ -1,0 +1,25 @@
+.input {
+    border-radius: 8px;
+    border: solid 1px #E11932;
+    padding: 2%;
+    width: 100%;
+    max-width: 70%;
+}
+
+.boton-primario {
+    display: flex;
+    padding: 4%;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    margin: 1rem;
+    transition: opacity 0.5s;
+    font-weight: 600;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+    background-color: #E11932;
+    color: #F2F3F7;
+    box-shadow: 0 4px 4px 0 #0000002c;
+    border: none;
+}

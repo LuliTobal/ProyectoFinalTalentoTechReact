@@ -3,6 +3,7 @@ import '../EstilosComponentes/EstilosOrganismos/estiloCardReceta.css'
 import Button from '../atomos/Boton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-regular-svg-icons';
+import Swal from 'sweetalert2';
 
 function CardReceta() {
 
@@ -18,7 +19,17 @@ function CardReceta() {
        setLoading(false);
       })
      .catch(err => console.error('Se ha producido un error', err))
-  }, [])
+  }, []);
+
+  const agregarLista = () => {
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Receta agregada",
+      showConfirmButton: false,
+      timer: 1500
+    });
+  };
 
 
   return (
@@ -31,7 +42,7 @@ function CardReceta() {
           {recetas.map(receta => (
             <div className='card_receta' key={receta.idMeal}>
               <div className='informacion_receta'>
-                <Button variante={'icono'} icon={'guardar'} iconSize={'l'} className='boton_guardar' />
+                <Button variante={'icono'} icon={'guardar'} iconSize={'l'} className='boton_guardar' onClick={agregarLista} />
                 <p className='categoria_receta'>{receta.strCategory}</p>
                 <h4 className='titulo_receta'>{receta.strMeal}</h4>
                 <span className='valoracion_receta'>

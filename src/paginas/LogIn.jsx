@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Boton from '../componentes/atomos/Boton'
+import Input from "../componentes/atomos/Input";
+import './EstilosPaginas/estiloLogin.css';
 
 function LogIn() {
 
@@ -11,14 +12,14 @@ function LogIn() {
     };
 
     return(
-        <div>
+        <div className="login_container">
             <h2>Iniciar sesión</h2>
-            <form action="">
-                <label htmlFor="mailLogIn"></label>
-                <input type="email" name="mailLogIn" id="mailLogIn" />
-                <label htmlFor="contraseña"></label>
-                <input type="password" name="contraseña" id="contraseña" />
-                <Boton variante={primario} texto={Ingresar} onClick={handleLogIn} />
+            <form className="login_formulario_container">
+                <label htmlFor="mailLogIn">Email</label>
+                <Input tipo="email" nombre="mailLogIn" id="mailLogIn" clase="input" />
+                <label htmlFor="contraseña">Contraseña</label>
+                <Input tipo="password" nombre="contraseña" id="contraseña" clase="input" />
+                <Input tipo="submit" valor="Ingresar" onClick={handleLogIn} clase="boton-primario" />
             </form>
         </div>
     );

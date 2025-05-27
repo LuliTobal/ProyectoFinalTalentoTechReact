@@ -10,23 +10,23 @@ function NavBar(){
     //funcion para alternar el estado del menú
     const toggleMenu = () => setMenuOpen(!menuOpen);
     
-    const isAuth = localStorage.getItem('auth') === 'true';
+    const isAuth = localStorage.getItem('auth')  === 'true';
 
 
     return(
         <nav className={`navbar`} >{/*operador ternario para el menu*/}
             <FontAwesomeIcon icon={faBars} alt="Menú" className="menu_icon" onClick={toggleMenu} />
             <div className={`nav_links ${menuOpen ? 'open' : ''}`}>
-                <Link to='/nosotros'>Sobre Nosotros</Link>
+                <Link to='/'>Sobre Nosotros</Link>
                 <Link to='/contacto'>Contacto</Link>
                 {isAuth && (
                     <>
-                        <Link to='/'>Home</Link>
+                        <Link to='/home'>Home</Link>
                         <Link to='/alacena'>Tu Alacena</Link>
                         <Link to='/recetas'>Tus Recetas</Link>
                         <Link to='/listas'>Listas de Super</Link> 
                     </>
-                )};                
+                )}                
             </div>
         </nav>
     );
