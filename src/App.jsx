@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div>
-      <Router>
+      <Router basename="/ProyectoFinalTalentoTechReact">
         <div>
           <Header />
           <Routes>
