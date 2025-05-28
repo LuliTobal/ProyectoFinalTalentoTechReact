@@ -1,4 +1,4 @@
-.container_recetas_grandes{
+.container_recetas{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

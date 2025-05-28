@@ -1,0 +1,61 @@
+.container_cardsRecetas_chica{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 45%;
+    margin: 1%;
+    height: 100%;
+    min-height: 321px;
+}
+
+.card_receta_chica{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 321px;
+}
+
+.informacion_receta_chica{
+    flex-direction: column;
+    justify-content: center;
+    height: 75%;
+    padding: 0;
+    border-radius: 10px 10px;
+    box-shadow: 0 4px 4px 0 rgb( 0 , 0, 0, 0.1);
+}
+
+.img_receta_chica{
+    height: 65%;
+    width: 100%;
+    object-fit: cover;
+    border-radius:  10px 10px 0 0;
+}
+
+.categoria_receta_chica, .titulo_receta_chica{
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 1rem;
+}
+
+.titulo_receta_chica{
+    font-size: 1rem;
+}
+
+.categoria_receta_chica{
+    font-size: 0.8rem;
+}
+
+.boton_guardar_chica{
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    
+    .container_cardsRecetas_chica{
+        max-width: 20%;
+    }
+
+    .card_receta_chica{
+        height: 50vh;
+    }
+}

@@ -3,7 +3,7 @@ import '../EstilosComponentes/EstilosOrganismos/estiloSeccionRecetasGrandes.css'
 
 function SeccionRecetasGrandes() {
  return(
-    <div className="container_recetas_grandes">
+    <div className="container_recetas">
         <CardReceta />
         <CardReceta />
         <CardReceta />

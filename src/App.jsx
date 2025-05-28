@@ -23,7 +23,7 @@ function App() {
             <Route path='/' element={ <SobreNosotros/> } />
             <Route path='/contacto' element={ <Contacto/> } />
 
-            <Route path='/home/:id' element={ <RutaProtegida><Home/></RutaProtegida> } />
+            <Route path='/home' element={ <RutaProtegida><Home/></RutaProtegida> } />
             <Route path='/alacena' element={ <RutaProtegida><Alacena/></RutaProtegida> } />
             <Route path='/recetas' element={ <RutaProtegida><TusRecetas/></RutaProtegida> } />
             <Route path='/listas' element={ <RutaProtegida><Listas/></RutaProtegida> } />            

@@ -8,7 +8,7 @@ function LogIn() {
 
     const handleLogIn = () => {
         localStorage.setItem('auth', 'true')
-        navigate('/home/usuarioLogueado');
+        navigate('/home');
     };
 
     return(
