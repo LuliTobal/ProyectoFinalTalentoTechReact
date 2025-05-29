@@ -10,6 +10,7 @@ import Header from './componentes/Header';
 import Footer from './componentes/Footer';
 import LogIn from './paginas/LogIn';
 import RutaProtegida from './componentes/RutaProtegida';
+import RecetasCategorias from './paginas/RecetasCategorias';
 
 function App() {
 
@@ -27,7 +28,8 @@ function App() {
             <Route path='/alacena' element={ <RutaProtegida><Alacena/></RutaProtegida> } />
             <Route path='/recetas' element={ <RutaProtegida><TusRecetas/></RutaProtegida> } />
             <Route path='/listas' element={ <RutaProtegida><Listas/></RutaProtegida> } />            
-            <Route path='/lista' element={ <RutaProtegida><ListaActual/></RutaProtegida> } />  
+            <Route path='/lista' element={ <RutaProtegida><ListaActual/></RutaProtegida> } />
+            <Route path='/recetasCategorias/:tituloCat' element={ <RecetasCategorias/> } /> 
           </Routes>
           <Footer />
         </div>

@@ -4,7 +4,9 @@
     flex-wrap: wrap;
     width: 95%;
     justify-self: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    column-gap: 2rem;
+    row-gap: 1rem;
 }
 
 @media (min-width: 768px) {

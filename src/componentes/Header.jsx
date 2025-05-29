@@ -20,10 +20,6 @@ function Header(){
         <header className="header_nav">
             <div className="header_usuario">
                 <Link to='/nosotros'><img src='src\assets\logo-oscuro-02.png' alt="Logo de la empresa" className="logo"/></Link>
-                {/* <div className='header_icons_btns'>
-                    <button>LogIn</button>
-                    <button>SignIn</button>
-                </div> */}
                 <div className='header-botones'>
                     {!isAuth ? (
                         <Link to='/login' className='boton-primario'>Login</Link>

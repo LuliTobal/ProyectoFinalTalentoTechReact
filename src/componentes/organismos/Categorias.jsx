@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import '../EstilosComponentes/EstilosOrganismos/estiloCategorias.css'
 import Categoria from '../moleculas/Categoria'
@@ -5,7 +6,7 @@ import Categoria from '../moleculas/Categoria'
 const Categorias = () => {
 
     const [categorias , setCategorias] = useState([]);
-     const [loading , setLoading] = useState(true);
+    const [loading , setLoading] = useState(true);
 
     useEffect (() => {
         fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
@@ -24,7 +25,9 @@ const Categorias = () => {
                 <p>Cargando..</p>
             ) : (
                 categorias.map(cat =>
-                    <Categoria urlImg={cat.strCategoryThumb} tituloCat={cat.strCategory} size={'large'} />
+                    <Link key={cat.idCategory} to={`/recetasCategorias/${cat.strCategory}`}>
+                        <Categoria urlImg={cat.strCategoryThumb} tituloCat={cat.strCategory} size={'large'} />
+                    </Link>
                 )
             )}
         </div>

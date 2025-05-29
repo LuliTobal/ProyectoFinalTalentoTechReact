@@ -10,6 +10,8 @@ function SeccionRecetasChicas(){
             <CardRecetaChica /> 
             <CardRecetaChica /> 
             <CardRecetaChica /> 
+            <CardRecetaChica /> 
+            <CardRecetaChica /> 
         </div>
     )
 }

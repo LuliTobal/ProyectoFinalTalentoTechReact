@@ -1,19 +1,14 @@
-.container_cardsRecetas{
-    display: flex;
-    flex-direction: row;
-    margin-top: 2rem;
-    align-items: center;
-    max-width: 400px;
-}
-
 .card_receta{
     width: 100%;
     display: flex;
     flex-direction: row;
-    aspect-ratio: 2 / 1.2;
+    margin-top: 2rem;
+    align-items: center;
+    max-width: 350px;
 }
 
 .informacion_receta{
+    height: -webkit-fill-available;
     flex-direction: column;
     justify-content: center;
     width: 65%;
@@ -23,6 +18,7 @@
 }
 
 .img_receta{
+    height: 100%;
     width: 35%;
     object-fit: cover;
     border-radius: 0 10px 10px 0;
