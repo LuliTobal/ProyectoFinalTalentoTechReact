@@ -4,7 +4,7 @@ import { RecetasContext } from '../../contextos/RecetasContex';
 import '../EstilosComponentes/EstilosOrganismos/estiloSeccionRecetasGrandes.css';
 
 function SeccionRecetasGrandes() {
-    const { recetas, fetchRandomRecetas} = useContext(RecetasContext);
+    const { recetas } = useContext(RecetasContext);
 
     if(recetas.length === 0) {
         return (
@@ -13,12 +13,11 @@ function SeccionRecetasGrandes() {
     };
 
     return(
-        <div>
+        <div className='container_recetas'>
             {recetas.map((recipe , index) => (
                 <CardReceta key={index} receta={recipe} />
             )) 
             }
-            <button onClick={fetchRandomRecetas}>cargar nuevas recetas</button>
         </div>
     );
 };
