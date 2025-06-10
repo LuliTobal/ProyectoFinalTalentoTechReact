@@ -12,28 +12,33 @@ import LogIn from './paginas/LogIn';
 import RutaProtegida from './componentes/RutaProtegida';
 import RecetasCategorias from './paginas/RecetasCategorias';
 
+import { RecetasProvider } from './contextos/RecetasContex'
+import SeccionRecetasGrandes from './componentes/organismos/SeccionRecetasGrandes';
+
 function App() {
 
   return (
     <div>
-      <Router basename="/ProyectoFinalTalentoTechReact">
-        <div>
-          <Header />
-          <Routes>
-            <Route path='/login' element={ <LogIn/> } />
-            <Route path='/' element={ <SobreNosotros/> } />
-            <Route path='/contacto' element={ <Contacto/> } />
+      <RecetasProvider>
+        <Router basename="/ProyectoFinalTalentoTechReact">
+          <div>
+            <Header />
+            <Routes>
+              <Route path='/login' element={ <LogIn/> } />
+              <Route path='/' element={ <SobreNosotros/> } />
+              <Route path='/contacto' element={ <Contacto/> } />
 
-            <Route path='/home' element={ <RutaProtegida><Home/></RutaProtegida> } />
-            <Route path='/alacena' element={ <RutaProtegida><Alacena/></RutaProtegida> } />
-            <Route path='/recetas' element={ <RutaProtegida><TusRecetas/></RutaProtegida> } />
-            <Route path='/listas' element={ <RutaProtegida><Listas/></RutaProtegida> } />            
-            <Route path='/lista' element={ <RutaProtegida><ListaActual/></RutaProtegida> } />
-            <Route path='/recetasCategorias/:tituloCat' element={ <RecetasCategorias/> } /> 
-          </Routes>
-          <Footer />
-        </div>
-      </Router>
+              <Route path='/home' element={ <RutaProtegida><Home/></RutaProtegida> } />
+              <Route path='/alacena' element={ <RutaProtegida><Alacena/></RutaProtegida> } />
+              <Route path='/recetas' element={ <RutaProtegida><TusRecetas/></RutaProtegida> } />
+              <Route path='/listas' element={ <RutaProtegida><Listas/></RutaProtegida> } />            
+              <Route path='/lista' element={ <RutaProtegida><ListaActual/></RutaProtegida> } />
+              <Route path='/recetasCategorias/:tituloCat' element={ <RecetasCategorias/> } /> 
+            </Routes>
+            <Footer />
+          </div>
+        </Router>
+      </RecetasProvider>
     </div>
   );
 };
