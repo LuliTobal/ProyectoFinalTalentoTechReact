@@ -1,4 +1,3 @@
-import { RecetasContext } from '../../contextos/RecetasContex';
 import '../EstilosComponentes/EstilosMoleculas/estiloCardRecetaChica.css'
 import Button from '../atomos/Boton';
 import Swal from 'sweetalert2';
@@ -22,7 +21,6 @@ function CardRecetaChica({ receta }) {
   };
 
   return (
-
     <div className='container_cardsRecetas_chica'>
       <div className='card_receta_chica' key={receta.idMeal}>
         <img src={receta.strMealThumb} alt={receta.strMeal} className='img_receta_chica' /> 

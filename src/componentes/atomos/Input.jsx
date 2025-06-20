@@ -1,8 +1,8 @@
 import '../EstilosComponentes/EstilosAtomos/estiloInput.css'
 
-function Input({tipo, valor, id, onClick, nombre, clase}) {
+function Input({tipo, value, id, onClick, nombre, clase, onChange}) {
     return(
-        <input type={tipo} value={valor} id={id} onClick={onClick} className={clase} name={nombre}/>
+        <input type={tipo} value={value} id={id} onClick={onClick} className={clase} name={nombre} onChange={onChange}/>
     );
 };
 
