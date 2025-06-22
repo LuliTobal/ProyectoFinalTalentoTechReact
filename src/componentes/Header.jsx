@@ -9,7 +9,7 @@ import { useAuth } from '../contextos/AuthContext';
 
 function Header(){
 
-    const {logout, login} = useAuth(); //llamamos a los valores del contexto useAuth
+    const {logout, token} = useAuth(); //llamamos a los valores del contexto useAuth
     const navigate = useNavigate();
 
     const cerrarSesion = () => { //funcion conectada al onClick del btn cerrar sesión
@@ -22,12 +22,12 @@ function Header(){
             <div className="header_usuario">
                 <Link to='/nosotros'><img src='src\assets\logo-oscuro-02.png' alt="Logo de la empresa" className="logo"/></Link>
                 <div className='header-botones'>
-                    {!login ? ( //si login devuelve falso, entonces me lleva al login para que me loguee y poder acceder
+                    {!token ? ( //si login devuelve falso, entonces me lleva al login para que me loguee y poder acceder
                         <Link to='/login' className='boton-primario'>Login</Link>
                     ) : ( // sino me habilita el navbar con el boton para poder cerrar sesión
                         <> 
-                        <Link to='/lista'><FontAwesomeIcon icon={faFileLines} alt="Icono lista" className="iconos_header" /></Link>
-                        <Boton texto='Cerrar sesión' onClick={cerrarSesion} className="boton-primario" variante='principal' />
+                            <Link to='/lista'><FontAwesomeIcon icon={faFileLines} alt="Icono lista" className="iconos_header" /></Link>
+                            <Boton texto='Cerrar sesión' onClick={cerrarSesion} className="boton-primario" variante='principal' />
                         </> 
                     )}
                 </div>
