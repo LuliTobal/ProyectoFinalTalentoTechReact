@@ -1,23 +1,34 @@
-import { useContext } from 'react';
+import { useContext , useEffect} from 'react';
 import CardReceta from '../organismos/CardReceta';
 import { RecetasContext } from '../../contextos/RecetasContex';
 import '../EstilosComponentes/EstilosOrganismos/estiloSeccionRecetasGrandes.css';
+//mport { useParams } from 'react-router-dom';
 
-function SeccionRecetasGrandes() {
-    const { recetas } = useContext(RecetasContext);
+function SeccionRecetasGrandes({ categoria }) {
+    const { recetas , recetasCategoria , fetchRandomRecetas , fetchCategoriaReceta } = useContext(RecetasContext);
+    //const { categoria } = useParams();
 
-    if(recetas.length === 0) {
-        return (
-            <p>No hay recetas</p>
-        )
-    };
+    useEffect(() => {
+        if (categoria) {
+            fetchCategoriaReceta(categoria);
+        } else {
+            for (let i = 0; i < 3; i++) {
+                fetchRandomRecetas();
+            }
+        }
+    },[categoria]);
+
+    const listaReceta = categoria ? recetasCategoria : recetas;
+
+    if (!listaReceta || listaReceta.length === 0) {
+        return <p>No hay recetas</p>
+    }
 
     return(
         <div className='container_recetas'>
-            {recetas.map((recipe , index) => (
-                <CardReceta key={index} receta={recipe} />
-            )) 
-            }
+            {listaReceta.map ((receta, index) => (
+                <CardReceta key={index} receta={receta} />
+            ))};
         </div>
     );
 };
