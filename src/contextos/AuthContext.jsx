@@ -19,7 +19,7 @@ export function AuthProvider ({ children }) { //creamos el componente provedor d
     }, []);
 
     const login = (userName , password) => {
-        if (userName === 'admin' && password === '1234'){ //aca hardcodeamos y si se cumple la condición
+        if (userName === 'admin' && password === '1234') { //aca hardcodeamos y si se cumple la condición
             const tokenFalso = 'Tbl01LrDS08Pmb95'; //generamos el token
             setToken(tokenFalso); //lo seteamos en las const
             setUser(userName); //y lo mismo con el usuario
