@@ -5,17 +5,17 @@ export const RecetasPropiasContext = createContext();
 const ApiRecetasPropias = 'https://686e794e91e85fac429de725.mockapi.io/api/tusrecetas/tusrecetas';
 
 export const RecetasPropiasProvider = ({children}) => {
-    const [recetas, setRecetas] = useState([]);
+    const [recetasPropias, setRecetasPropias] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const fetchRecetas = async () => {
+    const fetchRecetasPropias = async () => {
         setLoading(true);
         try{ //intenta hacer el fetch y setea los datos de la api en recetas usando setRecetas
             const res = await fetch(ApiRecetasPropias);
             if (!res.ok) throw new Error('Error al obtener información');
 
             const data = await res.json();
-            setRecetas(data);
+            setRecetasPropias(data);
         } catch (error) {
             alert('Error al cargar datos')
             console.error(error);
@@ -32,7 +32,7 @@ export const RecetasPropiasProvider = ({children}) => {
                 body: JSON.stringify(receta),
             });
             if (!res.ok) throw new Error('Error al crear item');
-            await fetchRecetas();
+            await fetchRecetasPropias();
         }catch (error) {
             alert('La receta no pudo ser creada');
             console.error(error);
@@ -47,7 +47,7 @@ export const RecetasPropiasProvider = ({children}) => {
                 body: JSON.stringify(receta)
             });
             if (!res.ok) throw new Error ('Error al modificar la receta');
-            await fetchRecetas();
+            await fetchRecetasPropias();
         } catch (error) {
             alert('Se produjo un error al cargar las modificaciones, vuelva a intentarlo');
             console.error(error);
@@ -59,7 +59,7 @@ export const RecetasPropiasProvider = ({children}) => {
             try {
                 const res = await fetch(`${ApiRecetasPropias}/${id}`, {method: 'DELETE'});
                 if(!res.ok) throw new Error('Error al eliminar la receta');
-                await fetchRecetas();
+                await fetchRecetasPropias();
             } catch (error) {
                 alert('Error eliminando la receta');
                 console.error(error);
@@ -68,11 +68,11 @@ export const RecetasPropiasProvider = ({children}) => {
     };
 
     useEffect(() => {
-        fetchRecetas();
+        fetchRecetasPropias();
     }, []);
 
     return(
-        <RecetasPropiasContext.Provider value={{recetas, loading, fetchRecetas, crearReceta, actualizarReceta, eliminarReceta}} >
+        <RecetasPropiasContext.Provider value={{recetasPropias, loading, fetchRecetasPropias, crearReceta, actualizarReceta, eliminarReceta}} >
             {children}
         </RecetasPropiasContext.Provider>
     );

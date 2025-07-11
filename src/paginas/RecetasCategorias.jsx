@@ -7,7 +7,7 @@ function RecetasCategorias () {
     return(
         <div>
             <h2>{tituloCat}</h2>
-            <SeccionRecetasGrandes categoria={tituloCat}/>
+            <SeccionRecetasGrandes categoria={tituloCat} modo='categoria' />
         </div>
     );
 };

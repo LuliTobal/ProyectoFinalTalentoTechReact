@@ -14,6 +14,7 @@ import RecetasCategorias from './paginas/RecetasCategorias';
 
 import { RecetasProvider } from './contextos/RecetasContex';
 import { AuthProvider } from './contextos/AuthContext';
+import { RecetasPropiasProvider } from './contextos/RecetasPropiasContext';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
     <div>
       <AuthProvider>
         <RecetasProvider>
+        <RecetasPropiasProvider>
           <Router basename="/ProyectoFinalTalentoTechReact">
             <div>
               <Header />
@@ -39,6 +41,7 @@ function App() {
               <Footer />
             </div>
           </Router>
+        </RecetasPropiasProvider>
         </RecetasProvider>
       </AuthProvider>
     </div>

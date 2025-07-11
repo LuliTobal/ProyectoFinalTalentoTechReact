@@ -6,11 +6,12 @@ function TusRecetas(){
         <div>
             <section>
                 <h2>RECETAS CREADAS</h2>
+                <SeccionRecetasGrandes modo='propias' />
             </section>
 
             <section>
                 <h2>RECETAS GUARDADAS</h2>
-                <SeccionRecetasGrandes />
+                
             </section>
             
         </div>

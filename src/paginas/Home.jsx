@@ -13,7 +13,7 @@ function Home(){
             </section>
             <section className='seccion_vista'>
                 <h2 className='titulo_seccion'>Recetas que te pueden gustar</h2>
-                <SeccionRecetasGrandes />
+                <SeccionRecetasGrandes modo='generales' />
             </section>
             <section className='seccion_vista'>
                 <h2 className='titulo_seccion'>Ultimas recetas</h2>
