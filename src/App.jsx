@@ -16,6 +16,8 @@ import { RecetasProvider } from './contextos/RecetasContex';
 import { AuthProvider } from './contextos/AuthContext';
 import { RecetasPropiasProvider } from './contextos/RecetasPropiasContext';
 
+import { Modal } from './componentes/organismos/Modal';
+
 function App() {
 
   return (
@@ -37,6 +39,7 @@ function App() {
                 <Route path='/listas' element={ <RutaProtegida><Listas/></RutaProtegida> } />            
                 <Route path='/lista' element={ <RutaProtegida><ListaActual/></RutaProtegida> } />
                 <Route path='/recetasCategorias/:tituloCat' element={ <RecetasCategorias/> } /> 
+                <Route path='/modal' element={ <Modal/> } /> {/*PUESTO PARA VISUALIZARLO, LUEGO SE SACA */}
               </Routes>
               <Footer />
             </div>

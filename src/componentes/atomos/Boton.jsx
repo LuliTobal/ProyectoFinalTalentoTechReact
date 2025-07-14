@@ -8,7 +8,7 @@ import { faSquareMinus, faSquarePlus, faBookmark } from "@fortawesome/free-regul
 // import { Badge } from "@mui/material";
 // import { Context } from "../../../context/Context";
 
-const Button = ({ texto, variante, icon, iconSize, onClick}) => {
+const Button = ({ texto, variante, icon, iconSize, onClick, type}) => {
   const buttonClassnames = classnames("button", {  //para pasarle el estilo al boton, 
     principal: variante === "principal",
     secundario: variante === "secundario",
@@ -34,7 +34,7 @@ const Button = ({ texto, variante, icon, iconSize, onClick}) => {
 
   return (
     <>
-      <button className={buttonClassnames} onClick={onClick}>
+      <button type={type} className={buttonClassnames} onClick={onClick}>
         {icon && (
 
           //<Badge badgeContent={cantidad} color="primary">

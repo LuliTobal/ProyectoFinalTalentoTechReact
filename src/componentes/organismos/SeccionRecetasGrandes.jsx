@@ -1,15 +1,13 @@
-import { useContext , useEffect} from 'react';
+import { useContext , useEffect, useState} from 'react';
 import CardReceta from '../organismos/CardReceta';
 import { RecetasContext } from '../../contextos/RecetasContex';
 import { RecetasPropiasContext } from '../../contextos/RecetasPropiasContext';
 import '../EstilosComponentes/EstilosOrganismos/estiloSeccionRecetasGrandes.css';
-//mport { useParams } from 'react-router-dom';
 
-function SeccionRecetasGrandes({ modo, categoria }) {
+function SeccionRecetasGrandes({ modo, categoria, onEditReceta }) {
     const { recetas , recetasCategoria , fetchRandomRecetas , fetchCategoriaReceta } = useContext(RecetasContext);
-    const { recetasPropias, fetchRecetasPropias } = useContext(RecetasPropiasContext);
+    const { recetasPropias, fetchRecetasPropias, eliminarReceta } = useContext(RecetasPropiasContext);
 
-    //const { categoria } = useParams();
 
     useEffect(() => {
         switch (modo) {
@@ -26,15 +24,6 @@ function SeccionRecetasGrandes({ modo, categoria }) {
                 }
                 break;
         }
-        // if (categoria) {
-        //     fetchCategoriaReceta(categoria);
-        // } else if (propias) {
-        //     fetchRecetasPropias();
-        // } else {
-        //     for (let i = 0; i < 3; i++) {
-        //         fetchRandomRecetas();
-        //     }
-        // }
     },[modo, categoria]);
 
     let listaReceta = [];
@@ -50,7 +39,11 @@ function SeccionRecetasGrandes({ modo, categoria }) {
             default:
                 listaReceta = recetas;
                 break;
-    }
+    };
+
+    const handleDelete = (id) => {
+        eliminarReceta(id);
+    };
 
     if (!listaReceta || listaReceta.length === 0) {
         return <p>No hay recetas</p>
@@ -59,24 +52,10 @@ function SeccionRecetasGrandes({ modo, categoria }) {
     return(
         <div className='container_recetas'>
             {listaReceta.map ((receta, index) => (
-                <CardReceta key={index} receta={receta} modo={modo}/>
+                <CardReceta key={index} receta={receta} modo={modo} onEdit={onEditReceta} onDelete={handleDelete}/>
             ))}
         </div>
     );
-
-    // const listaReceta = categoria ? recetasCategoria : recetas;
-
-    // if (!listaReceta || listaReceta.length === 0) {
-    //     return <p>No hay recetas</p>
-    // }
-
-    // return(
-    //     <div className='container_recetas'>
-    //         {listaReceta.map ((receta, index) => (
-    //             <CardReceta key={index} receta={receta} />
-    //         ))};
-    //     </div>
-    // );
 };
 
 export default SeccionRecetasGrandes;
