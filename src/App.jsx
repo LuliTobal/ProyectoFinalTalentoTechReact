@@ -5,7 +5,7 @@ import TusRecetas from './paginas/TusRecetas';
 import Listas from './paginas/Listas';
 import SobreNosotros from './paginas/SobreNos';
 import Contacto from './paginas/Contacto';
-import ListaActual from './paginas/ListaActual';
+import Recetario from './paginas/Recetario';
 import Header from './componentes/Header';
 import Footer from './componentes/Footer';
 import LogIn from './paginas/LogIn';
@@ -15,8 +15,7 @@ import RecetasCategorias from './paginas/RecetasCategorias';
 import { RecetasProvider } from './contextos/RecetasContex';
 import { AuthProvider } from './contextos/AuthContext';
 import { RecetasPropiasProvider } from './contextos/RecetasPropiasContext';
-
-import { Modal } from './componentes/organismos/Modal';
+import { RecetarioProvider } from './contextos/RecetarioContex';
 
 function App() {
 
@@ -25,6 +24,7 @@ function App() {
       <AuthProvider>
         <RecetasProvider>
         <RecetasPropiasProvider>
+        <RecetarioProvider>
           <Router basename="/ProyectoFinalTalentoTechReact">
             <div>
               <Header />
@@ -37,15 +37,16 @@ function App() {
                 <Route path='/alacena' element={ <RutaProtegida><Alacena/></RutaProtegida> } />
                 <Route path='/recetas' element={ <RutaProtegida><TusRecetas/></RutaProtegida> } />
                 <Route path='/listas' element={ <RutaProtegida><Listas/></RutaProtegida> } />            
-                <Route path='/lista' element={ <RutaProtegida><ListaActual/></RutaProtegida> } />
+                <Route path='/lista' element={ <RutaProtegida><Recetario/></RutaProtegida> } />
                 <Route path='/recetasCategorias/:tituloCat' element={ <RecetasCategorias/> } /> 
-                <Route path='/modal' element={ <Modal/> } /> {/*PUESTO PARA VISUALIZARLO, LUEGO SE SACA */}
               </Routes>
               <Footer />
             </div>
           </Router>
+        </RecetarioProvider>
         </RecetasPropiasProvider>
         </RecetasProvider>
+        
       </AuthProvider>
     </div>
   );

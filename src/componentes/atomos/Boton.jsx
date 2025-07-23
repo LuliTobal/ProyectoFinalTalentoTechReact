@@ -14,7 +14,8 @@ const Button = ({ texto, variante, icon, iconSize, onClick, type}) => {
     secundario: variante === "secundario",
     terciario: variante === "terciario",
     con_icono: variante === "icono",
-    icono_editar: variante === 'editar'
+    icono_editar: variante === 'editar',
+    diferente: variante === 'diferente'
   });
 
   const buttonIcon = [ //esto es para pasarle el icono del boton
@@ -24,7 +25,7 @@ const Button = ({ texto, variante, icon, iconSize, onClick, type}) => {
     icon === "restar" && faSquareMinus
   ].filter(Boolean)[0];
 
-//   const { carrito } = useContext(Context);
+
 //   const [cantidad, setCantidad] = useState(0);
 
 //   useEffect(() => {
@@ -36,14 +37,11 @@ const Button = ({ texto, variante, icon, iconSize, onClick, type}) => {
     <>
       <button type={type} className={buttonClassnames} onClick={onClick}>
         {icon && (
-
-          //<Badge badgeContent={cantidad} color="primary">
             <FontAwesomeIcon
               icon={buttonIcon}
               className="button-icon"
               size={iconSize}
             />
-          //</Badge>
         )}
         {texto}
       </button>

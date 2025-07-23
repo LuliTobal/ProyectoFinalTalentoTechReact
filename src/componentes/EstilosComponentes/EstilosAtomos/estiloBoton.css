@@ -61,3 +61,21 @@
   color: #F2F3F7;
   border: solid 3px #E11932;
 }
+
+.diferente {
+  display: flex;
+  padding: 2%;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  margin: 1rem;
+  transition: opacity 0.5s;
+  font-weight: 600;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  gap: 7%;
+  max-width: 50%;
+  background-color: #E11932;
+  color: #F2F3F7;
+  border: none;
+}

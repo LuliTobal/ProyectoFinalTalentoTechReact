@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 const CardReceta = ({ receta, modo, onEdit, onDelete }) => {
 
   const agregarLista = () => {
-    Swal.fire({
+      Swal.fire({
       position: "top-end",
       icon: "success",
       title: "Receta agregada",

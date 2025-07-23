@@ -8,7 +8,6 @@ function SeccionRecetasGrandes({ modo, categoria, onEditReceta }) {
     const { recetas , recetasCategoria , fetchRandomRecetas , fetchCategoriaReceta } = useContext(RecetasContext);
     const { recetasPropias, fetchRecetasPropias, eliminarReceta } = useContext(RecetasPropiasContext);
 
-
     useEffect(() => {
         switch (modo) {
             case 'categoria':
@@ -52,7 +51,7 @@ function SeccionRecetasGrandes({ modo, categoria, onEditReceta }) {
     return(
         <div className='container_recetas'>
             {listaReceta.map ((receta, index) => (
-                <CardReceta key={index} receta={receta} modo={modo} onEdit={onEditReceta} onDelete={handleDelete}/>
+                <CardReceta key={index} receta={receta} modo={modo} onEdit={onEditReceta} onDelete={handleDelete} />
             ))}
         </div>
     );
