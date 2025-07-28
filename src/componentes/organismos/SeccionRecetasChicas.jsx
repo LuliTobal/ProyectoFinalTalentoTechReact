@@ -7,10 +7,7 @@ import { RecetarioContext } from '../../contextos/RecetarioContex';
 function SeccionRecetasChicas(){
 
     const {recetas} = useContext(RecetasContext);
-
-    //////////AGREGADO PARA PROBAR EL CARRITO ///////////////////
     const {agregarAlRecetario} = useContext(RecetarioContext);
-    ////////////HASTA ACA /////////////////////////////
 
     if (recetas.length === 0) {
         return(
@@ -21,7 +18,6 @@ function SeccionRecetasChicas(){
     return(
         <div className='container_recetas'>
             {recetas.map ((receta, index) => (
-                ///////////AGREGADO PARA PROBAR EL CARRITO - agregarAlRecetario = {agregarAlRecetario} ///////////////////
                 <CardRecetaChica key={index} receta={receta} agregarAlRecetario = {agregarAlRecetario}/>
                 ))
             };
