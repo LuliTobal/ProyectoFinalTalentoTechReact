@@ -34,13 +34,12 @@ function Header(){
                     ) : ( // sino me habilita el navbar con el boton para poder cerrar sesión
                         <> 
                             <Link to='/lista'>
-                                <FontAwesomeIcon icon={faFileLines} alt="Icono lista" className="iconos_header" />
-                                {/*///AGREGADO PARA PROBAR EL CARRITO ///////////*/}
-                                {totalRecetas > 0 && ( 
-                                    <span className='badge'>{totalRecetas}</span>
-                                )}
-                                {/* <span className='badge'>{contador}</span> */}
-                                {/*  //////////HASTA ACA//////////////////////////// */}
+                                <div className="recetario_icon">
+                                    <FontAwesomeIcon icon={faFileLines} alt="Icono lista" className="iconos_header" />
+                                    {totalRecetas > 0 && ( 
+                                        <span className='badge'>{totalRecetas}</span>
+                                    )}
+                                </div>
                             </Link>
                             <Boton texto='Cerrar sesión' onClick={cerrarSesion} className="boton-primario" variante='principal' />
                         </> 

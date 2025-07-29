@@ -23,7 +23,7 @@ function SeccionRecetasChicas({contexto}){
             : recetario.map ((receta) => (
                     <CardRecetaChica key={receta.idMeal} receta={receta} eliminarDeRecetario ={eliminarDeRecetario}/>
                 ))
-            };
+            }
         </div>
     )
 }

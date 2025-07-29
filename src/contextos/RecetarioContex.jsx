@@ -9,8 +9,8 @@ export const RecetarioProvider = ({children}) => { //creacion de proveedor, pasa
 
     //funcion flecha que recibe la receta
     const agregarAlRecetario = (receta) => {
-        console.log("🔍 Receta recibida:", receta);
-        console.log("📌 ID de la receta:", receta?.idMeal);
+        console.log("Receta recibida:", receta);
+        console.log("ID de la receta:", receta?.idMeal);
 
         let recetaEliminada = false;
 
@@ -20,32 +20,26 @@ export const RecetarioProvider = ({children}) => { //creacion de proveedor, pasa
             if (existe) { //si devuelve true(osea ya está cargado)
                 recetaEliminada = true;
                 const nuevoRecetario = prevRecetario.filter(item => item.idMeal !== receta.idMeal);
-                
-                return nuevoRecetario;
-
-            } else {
-                const nuevoRecetario = [...prevRecetario, { ...receta }];
-                return nuevoRecetario;       
-            }
-        });
-        
-        setSweetAlert(() => {
-            if (recetaEliminada) {
                 Swal.fire({
                     title: "Receta eliminada del recetario",
                     icon: "none",
                     draggable: true
                 });
+                
+                return nuevoRecetario;
+
             } else {
-               Swal.fire({
+                const nuevoRecetario = [...prevRecetario, { ...receta }];
+                Swal.fire({
                     position: "top",
                     icon: "success",
                     title: "Receta agregada",
                     showConfirmButton: false,
                     timer: 1500
                 }); 
+                return nuevoRecetario;       
             }
-        }, 0);
+        });
     };
 
     useEffect(() => {

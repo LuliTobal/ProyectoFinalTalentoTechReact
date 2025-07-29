@@ -1,12 +1,12 @@
 import Categorias from '../componentes/organismos/Categorias'
 import SeccionRecetasGrandes from "../componentes/organismos/SeccionRecetasGrandes";
 import SeccionRecetasChicas from '../componentes/organismos/SeccionRecetasChicas';
-import './EstilosPaginas/estiloHome.css'
+import './EstilosPaginas/estiloVistas.css'
 
 function Home(){
 
     return(
-        <div className='vista_home'>
+        <div className='body_vista'>
             <section className='seccion_vista'>
                 <h2 className='titulo_seccion'>Categorias</h2>
                 <Categorias /> 
@@ -17,7 +17,7 @@ function Home(){
             </section>
             <section className='seccion_vista'>
                 <h2 className='titulo_seccion'>Ultimas recetas</h2>
-                <SeccionRecetasChicas />
+                <SeccionRecetasChicas contexto='recetasGenerales' />
             </section>
         </div>
     )

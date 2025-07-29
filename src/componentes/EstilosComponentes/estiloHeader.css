@@ -94,6 +94,24 @@
     align-items: center;
 }
 
+.recetario_icon{
+    position: relative;
+    display: inline-block;
+}
+
+.badge{
+    position: absolute;
+    top: -1px;
+    right: -5px;
+    background-color: #E11932;
+    font-weight: 700;
+    aspect-ratio: 1/1;
+    border: none;
+    border-radius: 50%;
+    color: #F9D1D6;
+    padding:  2px 6px;
+}
+
 /*QUERYS PARA PANTALLAS DE ESCRITORIO - A PARTIR DE LOS 768PX*/
 @media (min-width: 768px) {
 

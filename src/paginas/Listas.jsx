@@ -1,8 +1,10 @@
+import './EstilosPaginas/estiloVistas.css'
+
 function Lista(){
 
     return(
-        <div>
-            <h1>LISTAS SUPER</h1>
+        <div className='seccion_vista'>
+            <h1 className="titulo_seccion">RECETARIO</h1>
         </div>
     );
 };

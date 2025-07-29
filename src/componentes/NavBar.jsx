@@ -26,7 +26,8 @@ function NavBar(){
                         <Link to='/home'>Home</Link>
                         <Link to='/alacena'>Tu Alacena</Link>
                         <Link to='/recetas'>Tus Recetas</Link>
-                        <Link to='/listas'>Listas de Super</Link> 
+                        {/* <Link to='/listas'>Listas de Super</Link> */}
+                        <Link to='/recetario'>Recetario</Link>
                     </>
                 )}                
             </div>
