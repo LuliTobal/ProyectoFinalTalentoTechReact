@@ -37,7 +37,7 @@ function App() {
                 <Route path='/alacena' element={ <RutaProtegida><Alacena/></RutaProtegida> } />
                 <Route path='/recetas' element={ <RutaProtegida><TusRecetas/></RutaProtegida> } />
                 <Route path='/listas' element={ <RutaProtegida><Listas/></RutaProtegida> } />            
-                <Route path='/lista' element={ <RutaProtegida><Recetario/></RutaProtegida> } />
+                <Route path='/recetario' element={ <RutaProtegida><Recetario/></RutaProtegida> } />
                 <Route path='/recetasCategorias/:tituloCat' element={ <RecetasCategorias/> } /> 
               </Routes>
               <Footer />

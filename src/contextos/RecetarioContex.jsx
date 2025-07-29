@@ -11,25 +11,41 @@ export const RecetarioProvider = ({children}) => { //creacion de proveedor, pasa
     const agregarAlRecetario = (receta) => {
         console.log("🔍 Receta recibida:", receta);
         console.log("📌 ID de la receta:", receta?.idMeal);
+
+        let recetaEliminada = false;
+
         setRecetario((prevRecetario) => { //guarda en recetario lo que devuelve, toma lo que habia guardado
             const existe = prevRecetario.find(item => item.idMeal === receta.idMeal); //busca en el lo que ya tenia recetario y hace un mapeo, cada item(que ya estaba en el recetario toma su id y lo compara con el del nuevo que se quiere agregar)
 
             if (existe) { //si devuelve true(osea ya está cargado)
+                recetaEliminada = true;
                 const nuevoRecetario = prevRecetario.filter(item => item.idMeal !== receta.idMeal);
+                
                 return nuevoRecetario;
+
             } else {
                 const nuevoRecetario = [...prevRecetario, { ...receta }];
+                return nuevoRecetario;       
+            }
+        });
+        
+        setSweetAlert(() => {
+            if (recetaEliminada) {
                 Swal.fire({
-                    position: "top-end",
+                    title: "Receta eliminada del recetario",
+                    icon: "none",
+                    draggable: true
+                });
+            } else {
+               Swal.fire({
+                    position: "top",
                     icon: "success",
                     title: "Receta agregada",
                     showConfirmButton: false,
                     timer: 1500
-                });
-
-                return nuevoRecetario;       
+                }); 
             }
-        });  
+        }, 0);
     };
 
     useEffect(() => {

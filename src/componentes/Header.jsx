@@ -11,16 +11,13 @@ import { RecetarioContext } from '../contextos/RecetarioContex';
 
 function Header(){
 
-    ///////////AGREGADO PARA INTENTAR CARRITO/////////////////
     const { recetario} = useContext(RecetarioContext); //para que muestre la cantidaddel contador
-    //////////HASTA ACA////////////////////////////
+
     const {logout, token} = useAuth(); //llama a los valores del contexto useAuth
     const navigate = useNavigate();
 
-    ///////////AGREGADO PARA INTENTAR CARRITO/////////////////
     const totalRecetas = recetario.length;
-    // const totalRecetas = recetario.reduce((acc, receta) => acc + receta.cantidad, 0);
-    //////////HASTA ACA////////////////////////////
+
 
     const cerrarSesion = () => { //funcion conectada al onClick del btn cerrar sesión
         logout(); // llama a la funcion del contexto que mata el local storage

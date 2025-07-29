@@ -1,18 +1,7 @@
 import '../EstilosComponentes/EstilosMoleculas/estiloCardRecetaChica.css'
 import Button from '../atomos/Boton';
-// import Swal from 'sweetalert2';
 
 function CardRecetaChica({ receta, agregarAlRecetario }) {
-
-  // const agregarLista = () => {
-  //   Swal.fire({
-  //     position: "top-end",
-  //     icon: "success",
-  //     title: "Receta agregada",
-  //     showConfirmButton: false,
-  //     timer: 1500
-  //   });
-  // };
 
   if (!receta){
     return(
@@ -32,7 +21,6 @@ function CardRecetaChica({ receta, agregarAlRecetario }) {
         </div>   
       </div>
     </div>
-
   );
 };
 

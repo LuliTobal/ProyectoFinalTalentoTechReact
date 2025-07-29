@@ -1,12 +1,8 @@
-// import { useContext, useEffect, useState } from "react";
 import "../EstilosComponentes/EstilosAtomos/estiloBoton.css";
 import classnames from "classnames";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark as guardado } from "@fortawesome/free-solid-svg-icons";
 import { faSquareMinus, faSquarePlus, faBookmark } from "@fortawesome/free-regular-svg-icons";
-// import Icon from "../Icon/Icon";
-// import { Badge } from "@mui/material";
-// import { Context } from "../../../context/Context";
 
 const Button = ({ texto, variante, icon, iconSize, onClick, type}) => {
   const buttonClassnames = classnames("button", {  //para pasarle el estilo al boton, 
@@ -24,14 +20,6 @@ const Button = ({ texto, variante, icon, iconSize, onClick, type}) => {
     icon === "sumar" && faSquarePlus,
     icon === "restar" && faSquareMinus
   ].filter(Boolean)[0];
-
-
-//   const [cantidad, setCantidad] = useState(0);
-
-//   useEffect(() => {
-//     setCantidad(carrito.length);
-//   }, [carrito]);
-
 
   return (
     <>
