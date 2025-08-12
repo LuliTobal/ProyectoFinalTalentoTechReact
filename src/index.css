@@ -10,6 +10,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'Transforma';
+  src: url('/public/fonts/TransformaScript-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   /* display: flex; */
@@ -18,6 +25,10 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+.transforma{
+    font-family: 'Transforma', sans-serif;
 }
 
 /* button {

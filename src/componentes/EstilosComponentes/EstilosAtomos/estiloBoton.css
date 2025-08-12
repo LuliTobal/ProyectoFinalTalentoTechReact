@@ -34,9 +34,15 @@
 }
 
 .terciario {
-  background-color: #F2F3F7;
+  background-color: #f8f8fb;
   color: #E11932;
   border: solid 1px #E11932;
+}
+
+.cuarto {
+  background-color: #ffffff;
+  color: #f99aa4;
+  border: solid 1px #f99aa4;
 }
 
 .button-icon {

@@ -9,6 +9,7 @@ const Button = ({ texto, variante, icon, iconSize, onClick, type}) => {
     principal: variante === "principal",
     secundario: variante === "secundario",
     terciario: variante === "terciario",
+    cuarto: variante === "cuarto",
     con_icono: variante === "icono",
     icono_editar: variante === 'editar',
     diferente: variante === 'diferente'

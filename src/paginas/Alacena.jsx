@@ -1,10 +1,12 @@
-function Alacena(){
+// import './EstilosPaginas/estiloVistas.css'
 
-    return(
-        <div>
-            <h1>TU ALACENA</h1>
-        </div>
-    );
-};
+// function Alacena(){
 
-export default Alacena;
+//     return(
+//         <div>
+//             <h1>TU ALACENA</h1>
+//         </div>
+//     );
+// };
+
+// export default Alacena;

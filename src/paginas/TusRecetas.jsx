@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Modal } from "../componentes/organismos/Modal";
 import SeccionRecetasGrandes from "../componentes/organismos/SeccionRecetasGrandes";
 import Button from "../componentes/atomos/Boton";
+import './EstilosPaginas/estiloVistas.css'
 
 function TusRecetas(){
 
@@ -17,8 +18,8 @@ function TusRecetas(){
     };
 
     return(
-        <div>
-            <section>
+        <div >
+            <section className="seccion_vista">
                 <div style={{display: 'inline-flex', width: '100%', justifyContent: 'space-around', padding: '2rem'}}>
                     <h2 style={{marginRight: '5rem', width: '90%'}}>RECETAS CREADAS</h2>
                     <Button texto='Agregar receta' variante='diferente' icon='sumar' iconSize='xl' onClick={modalNuevaReceta}/>
@@ -30,7 +31,7 @@ function TusRecetas(){
                 />
             </section>
 
-            <section>
+            <section className="seccion_vista">
                 <h2>RECETAS GUARDADAS</h2>
                 
             </section>

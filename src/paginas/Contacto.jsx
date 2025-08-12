@@ -2,7 +2,6 @@ import Input from '../componentes/atomos/Input';
 import './EstilosPaginas/estiloContacto.css';
 import Swal from 'sweetalert2';
 
-
 const mensajeEnviado = () => {
     Swal.fire({
         title: "Tu mensaje fue enviado",
@@ -28,7 +27,7 @@ function Contacto(){
                 <Input tipo="tel" nombre="telefono" id="telefono" clase="input" />
                 <label htmlFor="msjContacto">Mensaje</label>
                 <textarea name="msjContacto" id="msjContacto" className='input'></textarea>
-                <Input tipo="submit" valor="Enviar" clase="boton-primario" onClick={mensajeEnviado}/>
+                <Input tipo="submit" valor="Enviar" clase="boton-primario" onClick={mensajeEnviado} />
             </form>
         </div>
     );

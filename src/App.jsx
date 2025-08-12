@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './paginas/Home';
-import Alacena from './paginas/Alacena';
+// import Alacena from './paginas/Alacena';
 import TusRecetas from './paginas/TusRecetas';
 import Listas from './paginas/Listas';
 import SobreNosotros from './paginas/SobreNos';
@@ -34,13 +34,13 @@ function App() {
                 <Route path='/contacto' element={ <Contacto/> } />
 
                 <Route path='/home' element={ <RutaProtegida><Home/></RutaProtegida> } />
-                <Route path='/alacena' element={ <RutaProtegida><Alacena/></RutaProtegida> } />
+                {/* <Route path='/alacena' element={ <RutaProtegida><Alacena/></RutaProtegida> } /> */}
                 <Route path='/recetas' element={ <RutaProtegida><TusRecetas/></RutaProtegida> } />
                 <Route path='/listas' element={ <RutaProtegida><Listas/></RutaProtegida> } />            
                 <Route path='/recetario' element={ <RutaProtegida><Recetario/></RutaProtegida> } />
                 <Route path='/recetasCategorias/:tituloCat' element={ <RecetasCategorias/> } /> 
               </Routes>
-              <Footer />
+              <Footer className='footer' />
             </div>
           </Router>
         </RecetarioProvider>

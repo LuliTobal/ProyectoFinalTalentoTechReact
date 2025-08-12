@@ -1,6 +1,6 @@
 .estilo_vista{
     padding: 2rem 0 2rem 2rem;
-    margin: 20%;
+    max-width: 100vw;
 }
 
 .seccion_vista{
