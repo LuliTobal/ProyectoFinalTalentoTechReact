@@ -1,12 +1,54 @@
-.estilo_vista{
-    padding: 2rem 0 2rem 2rem;
-    max-width: 100vw;
+/*PARA TODOS LOS DIV CONTENEDORES DE LOS BODYS*/
+.estilo_vista{ 
+    padding: 2rem;
+    width: 100%;
+    justify-items: center;
+}
+
+/*PARA TODOS LOS TITULOS DE PAGINA*/
+.titulo_vista{
+    justify-self: left;
+    margin: 2rem 8rem;
+}
+
+/*PARA TODOS LOS TITULOS DE SECCIONES*/
+.titulo_seccion{
+    margin-left: 4rem;
+}
+
+/*PARA TODOS LOS TEXTOS DE SECCIONES*/
+.texto_descripcion{
+    text-align: justify;
+    text-justify: distribute;
+    font-size: 1.5rem;
 }
 
 .seccion_vista{
+    /* width: 100%; */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4%;
     margin: 4rem 0;
 }
 
-.titulo_seccion{
-    margin-left: 2rem;
+.seccion_container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+
+@media (min-width: 768px) {
+
+    .desplegable {
+        max-width:25%;
+    }
+
+    .seccion_container{
+        width: 90%;
+        padding: 5%;
+    }
+
+}
+/* @media (min-width: 1024px) {} */

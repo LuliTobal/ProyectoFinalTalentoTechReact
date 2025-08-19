@@ -12,6 +12,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0 2%;
+    align-items: center;
 }
 
 .logo{
@@ -64,25 +65,6 @@
     text-decoration: none;
     color: #E11932;
     font-weight: 500;
-}
-
-.boton-primario {
-    display: flex;
-    padding: 2%;
-    border-radius: 10px;
-    letter-spacing: 1px;
-    margin: 1rem;
-    transition: opacity 0.5s;
-    font-weight: 600;
-    width: 100%;
-    max-width: 50%;
-    align-items: center;
-    justify-content: center;
-    background-color: #E11932;
-    color: #F2F3F7;
-    box-shadow: 0 4px 4px 0 #0000002c;
-    border: none;
-    text-decoration: none;
 }
 
 .header-botones{

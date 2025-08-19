@@ -29,8 +29,8 @@ function App() {
             <div>
               <Header />
               <Routes>
-                <Route path='/login' element={ <LogIn/> } />
-                <Route path='/' element={ <SobreNosotros/> } />
+                <Route path='/login' element={ <LogIn /> } />
+                <Route path='/' element={ <SobreNosotros className='seccion_vista' /> } />
                 <Route path='/contacto' element={ <Contacto/> } />
 
                 <Route path='/home' element={ <RutaProtegida><Home/></RutaProtegida> } />

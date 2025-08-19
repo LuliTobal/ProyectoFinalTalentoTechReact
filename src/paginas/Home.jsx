@@ -6,7 +6,7 @@ import './EstilosPaginas/estiloVistas.css'
 function Home(){
 
     return(
-        <div className="seccion_vista">
+        <div className="estilo_vista" >
             <section className='seccion_vista'>
                 <h2 className='titulo_seccion'>Categorias</h2>
                 <Categorias /> 

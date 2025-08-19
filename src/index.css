@@ -19,18 +19,22 @@
 
 body {
   margin: 0;
-  /* display: flex; */
+  /* width: 100vw;
+  display: flex; */
 }
 
-h1 {
+/* h1 {
   font-size: 3.2em;
   line-height: 1.1;
-}
+} */
 
 .transforma{
     font-family: 'Transforma', sans-serif;
 }
 
+/* .seccion_vista{
+  padding: 3%;
+} */
 /* button {
   border-radius: 8px;
   border: 1px solid transparent;

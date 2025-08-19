@@ -41,7 +41,7 @@ function Header(){
                                     )}
                                 </div>
                             </Link>
-                            <Boton texto='Cerrar sesión' onClick={cerrarSesion} className="boton-primario" variante='principal' />
+                            <Boton texto='Cerrar sesión' onClick={cerrarSesion} variante='principal' />
                         </> 
                     )}
                 </div>
