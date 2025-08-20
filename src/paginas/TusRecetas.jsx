@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Modal } from "../componentes/organismos/Modal";
 import SeccionRecetasGrandes from "../componentes/organismos/SeccionRecetasGrandes";
+import SeccionRecetasChicas from "../componentes/organismos/SeccionRecetasChicas";
 import Button from "../componentes/atomos/Boton";
 import './EstilosPaginas/estiloVistas.css'
 
@@ -33,6 +34,7 @@ function TusRecetas(){
 
             <section className="seccion_vista">
                 <h2>RECETAS GUARDADAS</h2>
+                <SeccionRecetasChicas modo='recetario'  />
                 
             </section>
 

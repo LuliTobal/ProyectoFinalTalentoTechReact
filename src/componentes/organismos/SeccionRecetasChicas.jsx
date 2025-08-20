@@ -7,7 +7,7 @@ import { RecetarioContext } from '../../contextos/RecetarioContex';
 function SeccionRecetasChicas({contexto}){
 
     const {recetas} = useContext(RecetasContext);
-    const {agregarAlRecetario, recetario, eliminarDeRecetario} = useContext(RecetarioContext);
+    const {agregarAlRecetario, recetario} = useContext(RecetarioContext);
 
     if (recetas.length === 0) {
         return(
@@ -18,10 +18,10 @@ function SeccionRecetasChicas({contexto}){
     return(
         <div className='container_recetas'>
             {contexto === 'recetasGenerales' ? recetas.map ((receta, index) => (
-                <CardRecetaChica key={index} receta={receta} agregarAlRecetario = {agregarAlRecetario}/>
+                <CardRecetaChica key={index} receta={receta} agregarAlRecetario = {agregarAlRecetario} />
             ))
             : recetario.map ((receta) => (
-                    <CardRecetaChica key={receta.idMeal} receta={receta} eliminarDeRecetario ={eliminarDeRecetario}/>
+                    <CardRecetaChica key={receta.idMeal} receta={receta} agregarAlRecetario = {agregarAlRecetario} />
                 ))
             }
         </div>

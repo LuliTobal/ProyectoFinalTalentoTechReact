@@ -11,7 +11,7 @@ function Recetario(){
     return(
         <div className="seccion_vista">
             <h1 className="titulo_seccion" >RECETARIO - Listado recetas guardadas</h1>
-            <SeccionRecetasChicas contexto='recetario' />
+            <SeccionRecetasChicas contexto='recetario'/>
         </div>
     );
 };
