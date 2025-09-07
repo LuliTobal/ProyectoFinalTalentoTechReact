@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import '../EstilosComponentes/EstilosOrganismos/estiloCardReceta.css'
 import Button from '../atomos/Boton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-regular-svg-icons';
 import Swal from 'sweetalert2';
+import { ModalReceta } from './ModalReceta';
 
 const CardReceta = ({ receta, modo, onEdit, onDelete }) => {
 
@@ -14,6 +16,12 @@ const CardReceta = ({ receta, modo, onEdit, onDelete }) => {
       showConfirmButton: false,
       timer: 1500
     });
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const modalReceta = () => {
+      setIsOpen(true);
   };
 
   if (!receta) {
@@ -42,10 +50,13 @@ const CardReceta = ({ receta, modo, onEdit, onDelete }) => {
             <Button variante={'principal'} texto={'Eliminar'} className={'boton_ver'} onClick={() => onDelete(receta.id)} />
           </div>
           ) : (
-          <Button variante={'principal'} texto={'Ver receta'} className='boton_ver' />
+          <Button variante={'principal'} texto={'Ver receta'} className='boton_ver' onClick={() => modalReceta(receta)} />
         )}
        </div>  
-       <img src={receta.strMealThumb} alt={receta.strMeal} className='img_receta' />  
+       <img src={receta.strMealThumb} alt={receta.strMeal} className='img_receta' />
+       {isOpen && (
+          <ModalReceta isOpen={isOpen} isClose={() => setIsOpen(false)} receta={receta} />
+        )}
      </div>
   )
 };

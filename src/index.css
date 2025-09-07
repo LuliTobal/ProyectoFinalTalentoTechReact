@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'Transforma';
-  src: url('/public/fonts/TransformaScript-Medium.ttf') format('truetype');
+  src: url('/fonts/TransformaScript-Medium.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
