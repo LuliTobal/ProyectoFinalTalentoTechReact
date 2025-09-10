@@ -69,6 +69,22 @@
     cursor: pointer;
 }
 
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    list-style-type: circle;
+    gap: 0.3rem;
+    padding:0 2rem;
+}
+
+li{
+    display: inline;
+    width: max-content;
+    padding: 0 0.5rem;
+    
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

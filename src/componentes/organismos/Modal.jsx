@@ -14,7 +14,7 @@ export function Modal ({ isOpen, isClose, modalMode, receta }) {
     useEffect(() => {
         if (modalMode === 'edit' && receta) {
             setCurrentReceta({
-                name:receta.name || "",
+                name:receta.StrMeal || "",
                 description: receta.description || "",
                 img: receta.img || "",
                 categoria: receta.categoria || "",
